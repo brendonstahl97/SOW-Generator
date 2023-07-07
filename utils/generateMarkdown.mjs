@@ -3,17 +3,17 @@ const currentDate = `${date.getDate()}/${date.getMonth()}/${date.getFullYear()}`
 
 const generateMarkdown = (data) => {
   let tasks = "";
-  
+
   data.tasksNotIncluded.split(", ").forEach((task) => {
     tasks += `\n   * ${task.trim()}`;
   });
-  
+
   let tasksNotIncluded = "";
-  
+
   data.tasksNotIncluded.split(", ").forEach((task) => {
     tasksNotIncluded += `\n   * ${task.trim()}`;
   });
-  
+
   let deliverables = "";
 
   data.deliverables.split(", ").forEach((deliverable) => {
@@ -41,7 +41,7 @@ const generateMarkdown = (data) => {
   }.
 
   ### Purpose and Objectives
-  The purpose of this project is to ${
+  The purpose of this project is ${
     data.purpose
   }. The project objectives are ${data.objectives}.
 

@@ -4,9 +4,9 @@ import generateMarkdown from "./utils/generateMarkdown.mjs";
 
 const testData = {
   clientCompanyName: "Bank Robbers Inc.",
-  sowNumber: "#001",
+  sowNumber: "001",
   overviewOfWork: "robbing the big bank undetected",
-  purpose: "obtain the rubies",
+  purpose: "to obtain the rubies",
   objectives: "to obtain the satchel of rubies undetected",
   tasks: "Break into the bank, Collect the rubies, Make tons of money",
   tasksNotIncluded:
@@ -86,8 +86,8 @@ const writeToFile = (fileName, data) => {
 };
 
 const init = async () => {
-  // const data = await inquirer.prompt(questions);
-  const data = testData;
+  const data = await inquirer.prompt(questions);
+  // const data = testData;
 
   console.log(data);
   writeToFile(
