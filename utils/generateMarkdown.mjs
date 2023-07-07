@@ -28,7 +28,7 @@ const generateMarkdown = (data) => {
 
   return `
   # Statement of Work
-  ##### By Brendon Stahl
+  ##### By ${data.contractorName}
   ##### For ${data.clientCompanyName}
   ##### ${currentDate}
   ##### SOW ${"#" + data.sowNumber}
@@ -36,7 +36,7 @@ const generateMarkdown = (data) => {
   ***
 
   ### Introduction
-  Brendon Stahl will perform ${data.overviewOfWork} for ${
+  ${data.contractorName} will perform ${data.overviewOfWork} for ${
     data.clientCompanyName
   }.
 
@@ -46,14 +46,14 @@ const generateMarkdown = (data) => {
   }. The project objectives are ${data.objectives}.
 
   ### Tasks
-  Brendon Stahl will complete the following tasks as part of this project: 
+  ${data.contractorName} will complete the following tasks as part of this project: 
   ${tasks}
 
-  The following tasks are not included in this project's scope and will not be performed by Brendon Stahl:
+  The following tasks are not included in this project's scope and will not be performed by ${data.contractorName}:
   ${tasksNotIncluded}
 
   ### Deliverables
-  Brendon Stahl will provide the following deliverables as part of this project:
+  ${data.contractorName} will provide the following deliverables as part of this project:
   ${deliverables}
 
   ### Schedule
@@ -72,7 +72,8 @@ const generateMarkdown = (data) => {
   ${data.clientCompanyName} has a total budget of ${
     data.clientBudget
   } for this project, not to be exceeded.
-  Brendon Stahl will charge the following rates per deliverable:
+
+  ${data.contractorName} will charge the following rates per deliverable:
   | Deliverable | Price |
   |-------------|-------|
   |             |       |
@@ -83,7 +84,7 @@ const generateMarkdown = (data) => {
   ### Resources
   ${
     data.clientCompanyName
-  } will supply the following resources to enable Brendon Stahl to complete this project:
+  } will supply the following resources to enable ${data.contractorName} to complete this project:
   ${resourcesRequired}
 
   ### Special Items and Conditions
@@ -91,7 +92,7 @@ const generateMarkdown = (data) => {
   ### Signatures
   Signed and agreed to by:
 
-  Brendon Stahl
+  ${data.contractorName}
 
   Signature _________________________
   Date ______________________________

@@ -3,6 +3,7 @@ import { writeFile } from "fs";
 import generateMarkdown from "./utils/generateMarkdown.mjs";
 
 const testData = {
+  contractorName: "Brendon Stahl",
   clientCompanyName: "Bank Robbers Inc.",
   sowNumber: "001",
   overviewOfWork: "robbing the big bank undetected",
@@ -18,6 +19,11 @@ const testData = {
 };
 
 const questions = [
+  {
+    type: "input",
+    message: "What is the contractor's name?",
+    name: "contractorName",
+  },
   {
     type: "input",
     message: "What is the client company name?",
@@ -86,12 +92,12 @@ const writeToFile = (fileName, data) => {
 };
 
 const init = async () => {
-  const data = await inquirer.prompt(questions);
-  // const data = testData;
+  // const data = await inquirer.prompt(questions);
+  const data = testData;
 
   console.log(data);
   writeToFile(
-    `output/${data.clientCompanyName}_SOW${data.sowNumber}.md`,
+    `output/${data.clientCompanyName}_SOW#${data.sowNumber}.md`,
     generateMarkdown(data)
   );
 };
