@@ -1,4 +1,4 @@
-# Stamement of Work Generator "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)"
+# Stamement of Work Generator [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Description
 A basic cli statement of work generator using Inquirer. When run, it outputs a markdown file created from cli prompts, containing placeholder tables for a timeline and budget.
